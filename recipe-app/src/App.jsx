@@ -10,6 +10,8 @@ import { OverviewCard, InstructionsCard, IngredientsCard, NutritionCard, SmartSu
 import { SavedRecipesGrid } from './components/SavedRecipesGrid';
 import { MealPlannerPanel } from './components/MealPlannerPanel';
 
+const API_URL = "https://recipe-backend.onrender.com";
+
 const mockExtracted = {
   title: 'Creamy Tuscan Garlic Chicken',
   cuisine: 'Italian',
@@ -83,7 +85,7 @@ export default function App() {
     setStatus('loading');
     
     try {
-      const res = await fetch('http://localhost:3001/api/extract', {
+      const res = await fetch(`${API_URL}/api/extract`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })
@@ -126,7 +128,7 @@ export default function App() {
 
     setStatus('loading');
     try {
-      const res = await fetch('http://localhost:3001/api/generate-plan', {
+      const res = await fetch(`${API_URL}/api/generate-plan`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ recipes: selectedList })

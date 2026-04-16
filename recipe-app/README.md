@@ -1,16 +1,33 @@
-# React + Vite
+# Recipe-app Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend component of the Recipe Extraction & Meal Planner application. It is built with React 19 and Vite, featuring a modern, responsive design with smooth animations.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-## React Compiler
+2. **Run Early Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. **Build for Production**:
+   ```bash
+   npm run build
+   ```
 
-## Expanding the ESLint configuration
+## 🏗️ Key Technologies
+- **React 19**: Core UI framework.
+- **Framer Motion**: Powering all transitions and interactive animations.
+- **Lucide React**: Clean and consistent iconography.
+- **Vite**: Ultra-fast build tool and development server.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+- `src/components`: UI components.
+- `src/App.jsx`: Main application logic and routing.
+- `src/index.css`: Global styles and design tokens.
+
+For full project documentation, including backend setup and AI architecture, please refer to the [Root README](../README.md).

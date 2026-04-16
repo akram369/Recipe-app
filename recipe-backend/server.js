@@ -6,7 +6,9 @@ const cheerio = require('cheerio');
 const { GoogleGenerativeAI, SchemaType } = require('@google/generative-ai');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(express.json());
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || 'MISSING_API_KEY');
@@ -204,7 +206,7 @@ app.post('/api/generate-plan', async (req, res) => {
   }
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Single-Pass Efficiency Engine running on http://localhost:${PORT}`);
+  console.log(`Server running on ${PORT}`);
 });
