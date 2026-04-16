@@ -11,6 +11,14 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Backend running 🚀");
+});
+
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || 'MISSING_API_KEY');
 
 const MASTER_PROMPT = `You are an AI-powered recipe extraction and intelligence engine operating under real-world API constraints.

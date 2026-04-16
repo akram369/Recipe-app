@@ -10,7 +10,7 @@ import { OverviewCard, InstructionsCard, IngredientsCard, NutritionCard, SmartSu
 import { SavedRecipesGrid } from './components/SavedRecipesGrid';
 import { MealPlannerPanel } from './components/MealPlannerPanel';
 
-const API_URL = "https://recipe-backend.onrender.com";
+const API_URL = "https://recipe-app-1-ynkx.onrender.com";
 
 const mockExtracted = {
   title: 'Creamy Tuscan Garlic Chicken',
